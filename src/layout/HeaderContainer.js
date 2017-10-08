@@ -4,7 +4,7 @@ import Header from './Header';
 
 const mapStateToProps = state => {
 	return {
-		appName: state.appName
+		appName: state.metadata.appName
 	};
 };
 

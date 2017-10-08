@@ -4,16 +4,19 @@ import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store'
 
-let dataStore = null;
+const dataStore = configureMockStore([]);
+let initialState = null;
 
 beforeEach(() => {
-  dataStore = configureMockStore([]);
+  initialState = dataStore({
+    metadata: {}
+  });
 });
 
 describe('App component', () => {
   it('renders correctly', () => {
     const tree = renderer.create(
-      <Provider store={dataStore()}>
+      <Provider store={initialState}>
         <App />
       </Provider>
     ).toJSON();
