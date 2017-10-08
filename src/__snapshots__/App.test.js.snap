@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders correctly 1`] = `
+<div
+  className="container"
+>
+  <header>
+    <h1 />
+  </header>
+  <div
+    className="counter"
+  >
+    <p>
+      Count: 
+    </p>
+    <div
+      aria-label="controls"
+      className="btn-group"
+      role="group"
+    >
+      <button
+        className="btn btn-primary"
+        onClick={[Function]}
+      >
+        Increase
+      </button>
+      <button
+        className="btn btn-warning"
+        onClick={[Function]}
+      >
+        Decrease
+      </button>
+      <button
+        className="btn btn-default"
+        onClick={[Function]}
+      >
+        Reset
+      </button>
+    </div>
+  </div>
+</div>
+`;
