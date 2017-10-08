@@ -1,19 +1,41 @@
-import { INCREASE_COUNT, DECREASE_COUNT, RESET_COUNT } from './actionTypes';
+import * as actionTypes from './actionTypes';
 
 export function increaseCount() {
 	return {
-		type: INCREASE_COUNT
+		type: actionTypes.INCREASE_COUNT
 	};
 }
 
 export function decreaseCount() {
 	return {
-		type: DECREASE_COUNT
+		type: actionTypes.DECREASE_COUNT
 	};
 }
 
 export function resetCount() {
 	return {
-		type: RESET_COUNT
+		type: actionTypes.RESET_COUNT
 	};
+}
+
+export function requestValuteData(baseValute = 'RUB') {
+  return {
+    type: actionTypes.FETCH_VALUTE_REQUEST,
+    baseValute
+  };
+}
+
+export function receiveValuteData(response) {
+  return {
+    type: actionTypes.FETCH_VALUTE_SUCCESS,
+    valutes: response.data,
+    receivedAt: Date.now()
+  };
+}
+
+export function handleValuteError(error) {
+  return {
+    type: actionTypes.FETCH_VALUTE_SUCCESS,
+    error
+  };
 }
